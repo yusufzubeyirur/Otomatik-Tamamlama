@@ -20,6 +20,7 @@ export default function ToDoList() {
 
   function handleNewItemInputChange(event) {
     setNewItemInput(event.target.value)
+    
   }
 
   /**** Sizi İlgilendiren Bölüm **************************************************************************/
@@ -97,6 +98,7 @@ export default function ToDoList() {
       <div className='to-do-list-item-container' key={item.id}>
         <label className='checkbox-label'>
           <input
+          value={newItemInput}
             type='checkbox'
             name={item.id}
             onChange={handleCheckBoxChange}
